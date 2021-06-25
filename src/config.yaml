@@ -1,0 +1,30 @@
+dataset:
+    data_directory: /home/dtank/lood_storage/divi/Projects/anchor/analysis/
+    
+model_params:
+    architecture: unet #can also be segnet
+    random_state: 42
+    k_folds: 5
+    
+train_params:
+    num_epochs: 250
+    # other options: dice_loss, BCE
+    loss: dice_loss
+    lr: 0.001
+    optimizer: 'adam'
+    
+train_dataloader:
+    batch_size: 16
+    shuffle: True
+    data_aug:
+        rot_degree: 10
+        transl_range: !!python/tuple [0.05, 0.05]
+        shear_range: !!python/tuple [-5, 5]
+        gauss_params:
+            std: 0.05
+            mean: 0
+
+test_dataloader:
+    batch_size: 16
+
+

@@ -1,0 +1,18 @@
+CUDA_VISIBLE_DEVICES=0
+Starting
+multichannel-unet
+No mask for image /home/dtank/lood_storage/divi/Projects/anchor/analysis/ANCHOR_0081_V1/MR/01101_DWI-IVIM_SENSE13_PF07_fatsatdef/20201118_070735DWIIVIMSENSE13PF07fatsatdefs1101a1011.nii.gz
+device: cuda 0
+------------------------------
+FOLD 3
+------------------------------
+start preparing datasets
+Traceback (most recent call last):
+  File "/scratch/dtank/AutoLiverSeg/src/train.py", line 372, in <module>
+    train(config, args)
+  File "/scratch/dtank/AutoLiverSeg/src/train.py", line 255, in train
+    train_dataset = MultiChannelMRI2DSegmentationDataset(train_files,
+  File "../src/utils/datasets.py", line 463, in __init__
+    self.preprocess
+AttributeError: 'MultiChannelMRI2DSegmentationDataset' object has no attribute 'preprocess'
+Done

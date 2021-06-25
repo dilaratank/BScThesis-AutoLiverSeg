@@ -1,0 +1,27 @@
+CUDA_VISIBLE_DEVICES=0
+Starting
+multichannel-unet
+No mask for image /home/dtank/lood_storage/divi/Projects/anchor/analysis/ANCHOR_0081_V1/MR/01101_DWI-IVIM_SENSE13_PF07_fatsatdef/20201118_070735DWIIVIMSENSE13PF07fatsatdefs1101a1011.nii.gz
+device: cuda 0
+------------------------------
+FOLD 0
+------------------------------
+start preparing datasets
+start preparing dataloaders
+Traceback (most recent call last):
+  File "/scratch/dtank/AutoLiverSeg/src/train.py", line 370, in <module>
+    train(config, args)
+  File "/scratch/dtank/AutoLiverSeg/src/train.py", line 307, in train
+    network.to(device)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/nn/modules/module.py", line 673, in to
+    return self._apply(convert)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/nn/modules/module.py", line 387, in _apply
+    module._apply(fn)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/nn/modules/module.py", line 387, in _apply
+    module._apply(fn)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/nn/modules/module.py", line 409, in _apply
+    param_applied = fn(param)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/nn/modules/module.py", line 671, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: all CUDA-capable devices are busy or unavailable
+Done

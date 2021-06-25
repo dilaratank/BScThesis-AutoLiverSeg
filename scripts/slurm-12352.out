@@ -1,0 +1,24 @@
+CUDA_VISIBLE_DEVICES=0
+Starting
+Transfer learning with liver1, smaller lr
+No mask for image /home/dtank/lood_storage/divi/Projects/anchor/analysis/ANCHOR_0081_V1/MR/01101_DWI-IVIM_SENSE13_PF07_fatsatdef/20201118_070735DWIIVIMSENSE13PF07fatsatdefs1101a1011.nii.gz
+device: cuda:0
+------------------------------
+FOLD 0
+------------------------------
+start preparing datasets
+start preparing dataloaders
+loading checkpoint
+Traceback (most recent call last):
+  File "/scratch/dtank/AutoLiverSeg/src/transfer_learning.py", line 294, in <module>
+    train(config)
+  File "/scratch/dtank/AutoLiverSeg/src/transfer_learning.py", line 251, in train
+    checkpoint = torch.load(filename)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/serialization.py", line 579, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/dtank/scratch/autosegliver/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './model-state-fold-0.pth'
+Done
